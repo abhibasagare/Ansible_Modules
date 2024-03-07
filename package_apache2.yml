@@ -1,0 +1,10 @@
+---
+- name: Installation of apache2 package
+  hosts: ubuntu
+  become: true
+  vars:
+    package: apache2
+  tasks:
+    - name: apache2 installing
+      action: apt name="{{ package }}" state=latest
+...

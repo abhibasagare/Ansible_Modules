@@ -1,0 +1,10 @@
+---
+- name: This file is for package installation
+  hosts: redhat
+  become: true
+  vars: 
+    package: httpd
+  tasks:
+    - name: this is first installation
+      action: yum name="{{ package }}" state=latest 
+...

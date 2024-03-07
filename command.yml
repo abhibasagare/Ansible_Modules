@@ -1,0 +1,13 @@
+---
+- name: package installation for both redhat and debian family
+  hosts: redhat,ubuntu
+  become: true
+  tasks:
+    - name: package installation for debian family
+      command: apt install apache2 -y
+      when: ansible_os_family == "Debian"
+
+    - name: package installation for redhat family
+      command: yum install httpd -y
+      when: ansible_os_family == "RedHat"
+...

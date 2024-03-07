@@ -1,0 +1,20 @@
+---
+- name: this is playbook for tag
+  hosts: all
+  become: true
+  tasks: 
+    - name: this task is for redhat
+      yum:
+        name: httpd
+        state: latest
+      ignore_errors: yes
+      tags: demo1
+
+    - name: this task is for debian
+      apt:
+        name: apache2
+        state: latest
+      ignore_errors: yes
+      tags: demo2
+
+...

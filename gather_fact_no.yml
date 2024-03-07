@@ -1,0 +1,10 @@
+---
+- name: gather fact NO
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+    - name: second trial
+      debug: 
+        msg: "This is trial again"
+...

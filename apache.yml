@@ -1,0 +1,10 @@
+---
+- name: installing apache2 package
+  hosts: ubuntu
+  become: true
+  tasks:
+    - name: apache2 package installing.......
+      apt:
+        name: apache2
+        state: latest
+...
