@@ -1,0 +1,12 @@
+--- 
+- name: this is block in line file
+  hosts: all
+  tasks:
+    - name: block in line
+      blockinfile:
+        path: /root/.ssh/authorized_keys
+        block:
+          this is the block
+          it can span multiple lines
+          # state: absent
+...

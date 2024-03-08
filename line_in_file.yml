@@ -1,0 +1,11 @@
+---
+- name: this is line in file module
+  hosts: all
+  become: true
+  tasks:
+    - name: trial line in file 
+      lineinfile:
+         path: /root/.ssh/authorized_keys
+         line: 'added'
+         state: present
+...

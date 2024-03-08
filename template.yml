@@ -1,0 +1,9 @@
+---
+- name: template file
+  hosts: all
+  tasks: 
+    - name: template file
+      template:
+        src: /root/.ssh/id_rsa
+        dest: /etc
+...
