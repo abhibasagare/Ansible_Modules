@@ -2,10 +2,12 @@
 - name: Both gather facts in signle file
   hosts: all
   become: true
-  gather_facts: yes
+  gather_facts: true
   tasks:
-   - name: this is first task without gather fact
+   - name: this is first task with gather fact
      debug:
        msg: "{{ ansible_os_family }}"
-     gather_facts: no
+     gather_facts: false
+   - name: this is second task without gather fact
+
 ...
